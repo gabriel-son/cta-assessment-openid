@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #ececec;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            border-bottom: 1px solid #ccc;
+            color: #3F51B5;
+            padding-bottom: 8px
+        }
+
+        .container {
+            margin: auto;
+            width: 350px;
+            text-align: center;
+        }
+
+        .listFlex {
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #login {
+            border: 1px solid black;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+    <title>User Profile</title>
+</head>
+
+<body>
+    <div class="container">
+        <% if(successful) {%>
+        <p style="color: red;">Login Failed</p>
+        <% } %>
+        <h1>Welcome to cashtoken Authenticator</h1>
+        <a href=<%= authorization_uri %> id='login'>Login</a>
+    </div>
+</body>
+
+</html>
